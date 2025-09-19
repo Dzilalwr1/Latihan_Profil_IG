@@ -4,97 +4,116 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Instagram Profile - Bootstrap</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap 5 CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
     body {
       background-color: #000;
       color: #fff;
     }
-    .story {
-      width: 70px;
-      height: 70px;
+    .profile-pic {
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
       border-radius: 50%;
-      border: 2px solid gray;
+      border: 2px solid #fff;
+    }
+    .feed-img {
+      width: 100%;
+      height: 250px;
       object-fit: cover;
     }
-    .nav-tabs .nav-link {
-      color: gray;
+    .btn-custom {
+      background-color: #262626;
+      color: #fff;
+      border: none;
     }
-    .nav-tabs .nav-link.active {
-      color: white;
-      border-top: 2px solid white;
+    .btn-custom:hover {
+      background-color: #333;
     }
   </style>
 </head>
 <body>
 
-  <!-- Header -->
-  <header class="border-bottom border-secondary p-3 text-center">
-    <h5 class="m-0">dzilalwyrhn</h5>
-  </header>
+<div class="container py-4">
 
-  <!-- Profile Section -->
-  <section class="container text-center text-md-start my-4">
-    <div class="row align-items-center">
-      <div class="col-md-3 text-center">
-        <img src="profile.jpg" class="rounded-circle border border-secondary" width="120" height="120">
-      </div>
-      <div class="col-md-9">
-        <div class="d-flex align-items-center gap-2 flex-wrap">
-          <h5 class="mb-0">dzilalwyrhn</h5>
-          <button class="btn btn-sm btn-secondary">Edit profile</button>
-          <button class="btn btn-sm btn-secondary">Share profile</button>
-        </div>
-        <div class="d-flex gap-3 my-2">
-          <span><b>0</b> posts</span>
-          <span><b>313</b> followers</span>
-          <span><b>220</b> following</span>
+  <!-- Header Profile -->
+  <div class="row align-items-center mb-4">
+    <div class="col-4 col-md-3 text-center">
+      <img src="assets/img/profile.jpg" alt="Profile" class="profile-pic">
+    </div>
+    <div class="col-8 col-md-9">
+      <div class="d-flex flex-column flex-md-row align-items-start align-items-md-center gap-2">
+        <h4 class="mb-0">dzilalwyrhn</h4>
+        <!-- Tombol berubah posisi di breakpoint -->
+        <div class="d-flex gap-2">
+          <button class="btn btn-sm btn-custom">Edit Profile</button>
+          <button class="btn btn-sm btn-custom">View Archive</button>
         </div>
       </div>
-    </div>
-  </section>
-
-  <!-- Story Highlights -->
-  <section class="container d-flex gap-3 overflow-auto pb-3">
-    <div class="text-center">
-      <img src="story1.jpg" class="story">
-      <p class="small">Story 1</p>
-    </div>
-    <div class="text-center">
-      <img src="story2.jpg" class="story">
-      <p class="small">New</p>
-    </div>
-  </section>
-
-  <!-- Navigation Tabs -->
-  <ul class="nav nav-tabs justify-content-center border-secondary">
-    <li class="nav-item">
-      <a class="nav-link active bg-black" data-bs-toggle="tab" href="#posts">Posts</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link bg-black" data-bs-toggle="tab" href="#reels">Reels</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link bg-black" data-bs-toggle="tab" href="#tagged">Tagged</a>
-    </li>
-  </ul>
-
-  <!-- Feed Content -->
-  <div class="tab-content">
-    <div class="tab-pane fade show active" id="posts">
-      <div class="container py-3">
-        <div class="row g-1">
-          <div class="col-4"><img src="feed1.jpg" class="w-100"></div>
-          <div class="col-4"><img src="feed2.jpg" class="w-100"></div>
-          <div class="col-4"><img src="feed3.jpg" class="w-100"></div>
-        </div>
-        <p class="text-center mt-5">Share Photos<br><small class="text-secondary">When you share photos, they will appear on your profile.</small></p>
+      <div class="d-flex gap-4 mt-3">
+        <span><b>0</b> posts</span>
+        <span><b>313</b> followers</span>
+        <span><b>220</b> following</span>
       </div>
     </div>
-    <div class="tab-pane fade text-center text-secondary py-5" id="reels">No Reels yet</div>
-    <div class="tab-pane fade text-center text-secondary py-5" id="tagged">No Tagged posts yet</div>
   </div>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Bio -->
+  <div class="row mb-4">
+    <div class="col">
+      <p class="mb-0">👨‍💻 Informatics Engineering</p>
+      <p class="mb-0">📍 Somewhere on Earth</p>
+    </div>
+  </div>
+
+  <!-- Feed -->
+  <div class="row g-2">
+    <!-- 12 gambar dummy -->
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+      <img src="assets/img/feed1.jpg" class="feed-img" alt="feed">
+    </div>
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+      <img src="assets/img/feed2.jpg" class="feed-img" alt="feed">
+    </div>
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+      <img src="assets/img/feed3.jpg" class="feed-img" alt="feed">
+    </div>
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+      <img src="assets/img/feed4.jpg" class="feed-img" alt="feed">
+    </div>
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+      <img src="assets/img/feed5.jpg" class="feed-img" alt="feed">
+    </div>
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+      <img src="assets/img/feed6.jpg" class="feed-img" alt="feed">
+    </div>
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+      <img src="assets/img/feed7.jpg" class="feed-img" alt="feed">
+    </div>
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+      <img src="assets/img/feed8.jpg" class="feed-img" alt="feed">
+    </div>
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+      <img src="assets/img/feed9.jpg" class="feed-img" alt="feed">
+    </div>
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+      <img src="assets/img/feed10.jpg" class="feed-img" alt="feed">
+    </div>
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+      <img src="assets/img/feed11.jpg" class="feed-img" alt="feed">
+    </div>
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+      <img src="assets/img/feed12.jpg" class="feed-img" alt="feed">
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="text-center mt-4 py-3 border-top border-secondary">
+    <small>&copy; 2025 Instagram Clone - Dzilalwyrhn</small>
+  </footer>
+
+</div>
+
 </body>
 </html>
