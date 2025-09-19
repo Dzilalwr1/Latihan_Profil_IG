@@ -1,68 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Instagram Profile - Tailwind</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-black text-white font-sans">
+  <!-- Header / Navbar -->
+  <header class="flex items-center justify-between px-4 py-3 border-b border-gray-800">
+    <h1 class="text-xl font-bold">dzilalwyrhn</h1>
+    <div class="flex gap-4">
+      <button class="w-6 h-6">⚙️</button>
+    </div>
+  </header>
 
   <!-- Profile Section -->
-  <div class="max-w-4xl mx-auto p-4">
-    <div class="flex flex-col md:flex-row items-center md:items-start gap-6">
-      <!-- Profile Pic -->
-      <div class="flex-shrink-0">
-        <img src="images/profile.jpg" alt="Profile" class="w-28 h-28 md:w-36 md:h-36 rounded-full border-2 border-gray-700">
+  <section class="px-4 py-6">
+    <div class="flex flex-col md:flex-row items-center md:items-start md:gap-10">
+      <!-- Avatar -->
+      <div class="flex justify-center md:justify-start">
+        <img src="assets/img/profile.jpg" alt="Profile" class="w-28 h-28 md:w-36 md:h-36 rounded-full object-cover border border-gray-700" />
       </div>
 
       <!-- Info -->
-      <div class="flex-1 text-center md:text-left">
-        <div class="flex flex-col md:flex-row md:items-center gap-4">
-          <h2 class="text-xl md:text-2xl font-semibold">username_ig</h2>
-          <button class="bg-gray-800 px-3 py-1 rounded text-sm">Edit Profile</button>
+      <div class="flex-1 mt-4 md:mt-0 text-center md:text-left">
+        <!-- Username + Actions -->
+        <div class="flex flex-col md:flex-row md:items-center md:gap-4">
+          <h2 class="text-lg font-semibold">dzilalwyrhn</h2>
+          <div class="flex justify-center md:justify-start gap-2 mt-2 md:mt-0">
+            <button class="bg-gray-800 px-3 py-1 rounded text-sm">Edit Profile</button>
+            <button class="bg-gray-800 px-3 py-1 rounded text-sm">Share Profile</button>
+          </div>
         </div>
+
+        <!-- Stats -->
         <div class="flex justify-center md:justify-start gap-6 mt-4">
-          <p><span class="font-semibold">100</span> posts</p>
-          <p><span class="font-semibold">2k</span> followers</p>
-          <p><span class="font-semibold">300</span> following</p>
-        </div>
-        <div class="mt-4">
-          <p class="font-semibold">Nama Lengkap</p>
-          <p class="text-sm">Bio singkat tentang akun ini. #coding #tailwind</p>
+          <span><strong>0</strong> posts</span>
+          <span><strong>313</strong> followers</span>
+          <span><strong>220</strong> following</span>
         </div>
       </div>
     </div>
-  </div>
+  </section>
 
-  <!-- Highlight Stories -->
-  <div class="max-w-4xl mx-auto flex gap-6 overflow-x-auto p-4">
+  <!-- Highlights -->
+  <section class="px-4 flex gap-6 justify-center md:justify-start mt-6">
     <div class="flex flex-col items-center">
-      <div class="w-16 h-16 rounded-full bg-gray-800 border border-gray-600 flex items-center justify-center">
-        <img src="images/post1.jpg" alt="Highlight" class="w-16 h-16 rounded-full object-cover">
+      <div class="w-16 h-16 rounded-full border border-gray-700 flex items-center justify-center overflow-hidden">
+        <span class="text-xs">+</span>
       </div>
-      <p class="text-xs mt-1">Highlight 1</p>
+      <span class="text-sm mt-2">New</span>
     </div>
     <div class="flex flex-col items-center">
-      <div class="w-16 h-16 rounded-full bg-gray-800 border border-gray-600 flex items-center justify-center">
-        <img src="images/post2.jpg" alt="Highlight" class="w-16 h-16 rounded-full object-cover">
+      <div class="w-16 h-16 rounded-full overflow-hidden border border-gray-700">
+        <img src="assets/img/story1.jpg" alt="Story" class="w-full h-full object-cover" />
       </div>
-      <p class="text-xs mt-1">Highlight 2</p>
+      <span class="text-sm mt-2">Story</span>
     </div>
-  </div>
+  </section>
 
-  <!-- Divider -->
-  <div class="border-t border-gray-700 max-w-4xl mx-auto mt-4"></div>
+  <!-- Tabs -->
+  <section class="border-t border-gray-800 mt-6">
+    <div class="flex justify-around text-gray-400">
+      <button class="py-2 border-t-2 border-white text-white">📷</button>
+      <button class="py-2">🎥</button>
+      <button class="py-2">🔖</button>
+    </div>
+  </section>
 
   <!-- Feed -->
-  <div class="max-w-4xl mx-auto grid grid-cols-3 gap-1 mt-4 p-2">
-    <img src="images/post1.jpg" alt="Post" class="w-full h-40 object-cover">
-    <img src="images/post2.jpg" alt="Post" class="w-full h-40 object-cover">
-    <img src="images/post3.jpg" alt="Post" class="w-full h-40 object-cover">
-    <img src="images/post1.jpg" alt="Post" class="w-full h-40 object-cover">
-    <img src="images/post2.jpg" alt="Post" class="w-full h-40 object-cover">
-    <img src="images/post3.jpg" alt="Post" class="w-full h-40 object-cover">
+  <!-- Feed -->
+<section class="p-2 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-1">
+  <!-- 12 gambar contoh -->
+  <div class="aspect-square overflow-hidden">
+    <img src="assets/img/post1.jpg" alt="Post 1" class="w-full h-full object-cover" />
   </div>
+  <div class="aspect-square overflow-hidden">
+    <img src="assets/img/post2.jpg" alt="Post 2" class="w-full h-full object-cover" />
+  </div>
+  <div class="aspect-square overflow-hidden">
+    <img src="assets/img/post3.jpg" alt="Post 3" class="w-full h-full object-cover" />
+  </div>
+  <div class="aspect-square overflow-hidden">
+    <img src="assets/img/post4.jpg" alt="Post 4" class="w-full h-full object-cover" />
+  </div>
+  <div class="aspect-square overflow-hidden">
+    <img src="assets/img/post5.jpg" alt="Post 5" class="w-full h-full object-cover" />
+  </div>
+  <div class="aspect-square overflow-hidden">
+    <img src="assets/img/post6.jpg" alt="Post 6" class="w-full h-full object-cover" />
+  </div>
+  <div class="aspect-square overflow-hidden">
+    <img src="assets/img/post7.jpg" alt="Post 7" class="w-full h-full object-cover" />
+  </div>
+  <div class="aspect-square overflow-hidden">
+    <img src="assets/img/post8.jpg" alt="Post 8" class="w-full h-full object-cover" />
+  </div>
+  <div class="aspect-square overflow-hidden">
+    <img src="assets/img/post9.jpg" alt="Post 9" class="w-full h-full object-cover" />
+  </div>
+  <div class="aspect-square overflow-hidden">
+    <img src="assets/img/post10.jpg" alt="Post 10" class="w-full h-full object-cover" />
+  </div>
+  <div class="aspect-square overflow-hidden">
+    <img src="assets/img/post11.jpg" alt="Post 11" class="w-full h-full object-cover" />
+  </div>
+  <div class="aspect-square overflow-hidden">
+    <img src="assets/img/post12.jpg" alt="Post 12" class="w-full h-full object-cover" />
+  </div>
+</section>
 
+  <!-- Footer -->
+  <footer class="text-center text-gray-500 text-sm py-6 border-t border-gray-800">
+    © 2025 Instagram Clone - Tailwind
+  </footer>
 </body>
 </html>
