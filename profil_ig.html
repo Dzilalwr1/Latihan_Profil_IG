@@ -3,117 +3,116 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Instagram Profile - Bootstrap</title>
-  <!-- Bootstrap 5 CDN -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <title>Instagram Profile Clone</title>
+  <!-- Bootstrap CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
   <style>
     body {
       background-color: #000;
       color: #fff;
     }
     .profile-pic {
-      width: 120px;
-      height: 120px;
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      border: 2px solid gray;
+      object-fit: cover;
+    }
+    .story-circle {
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      border: 2px solid gray;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      background: #222;
+    }
+    .story-circle img {
+      width: 100%;
+      height: 100%;
       object-fit: cover;
       border-radius: 50%;
-      border: 2px solid #fff;
     }
-    .feed-img {
-      width: 100%;
-      height: 250px;
-      object-fit: cover;
+    .tab-icon {
+      font-size: 1.5rem;
     }
-    .btn-custom {
-      background-color: #262626;
-      color: #fff;
-      border: none;
-    }
-    .btn-custom:hover {
-      background-color: #333;
+    .bottom-nav {
+      border-top: 1px solid #333;
+      background-color: #000;
     }
   </style>
 </head>
 <body>
 
-<div class="container py-4">
-
-  <!-- Header Profile -->
-  <div class="row align-items-center mb-4">
-    <div class="col-4 col-md-3 text-center">
-      <img src="assets/img/profile.jpg" alt="Profile" class="profile-pic">
+  <!-- Header -->
+  <div class="d-flex justify-content-between align-items-center px-3 py-2 border-bottom border-dark">
+    <h6 class="m-0">username_here <i class="bi bi-patch-check-fill text-primary"></i></h6>
+    <div>
+      <i class="bi bi-plus-square mx-2 fs-5"></i>
+      <i class="bi bi-list fs-5"></i>
     </div>
-    <div class="col-8 col-md-9">
-      <div class="d-flex flex-column flex-md-row align-items-start align-items-md-center gap-2">
-        <h4 class="mb-0">dzilalwyrhn</h4>
-        <!-- Tombol berubah posisi di breakpoint -->
-        <div class="d-flex gap-2">
-          <button class="btn btn-sm btn-custom">Edit Profile</button>
-          <button class="btn btn-sm btn-custom">View Archive</button>
-        </div>
+  </div>
+
+  <!-- Profile Info -->
+  <div class="d-flex align-items-center px-3 py-3">
+    <img src="https://via.placeholder.com/100" alt="profile" class="profile-pic me-3">
+    <div class="flex-grow-1">
+      <div class="d-flex justify-content-around">
+        <div><strong>0</strong><br><small class="text-secondary">Posts</small></div>
+        <div><strong>100</strong><br><small class="text-secondary">Followers</small></div>
+        <div><strong>120</strong><br><small class="text-secondary">Following</small></div>
       </div>
-      <div class="d-flex gap-4 mt-3">
-        <span><b>0</b> posts</span>
-        <span><b>313</b> followers</span>
-        <span><b>220</b> following</span>
+      <div class="d-flex mt-2">
+        <button class="btn btn-dark border w-100 me-1">Edit profile</button>
+        <button class="btn btn-dark border w-100">Share profile</button>
       </div>
     </div>
   </div>
 
   <!-- Bio -->
-  <div class="row mb-4">
-    <div class="col">
-      <p class="mb-0">👨‍💻 Informatics Engineering</p>
-      <p class="mb-0">📍 Somewhere on Earth</p>
+  <div class="px-3">
+    <p class="m-0 fw-bold">Full Name</p>
+    <p class="m-0 text-secondary">This is bio text.</p>
+  </div>
+
+  <!-- Story Highlights -->
+  <div class="d-flex px-3 py-3 gap-3">
+    <div class="text-center">
+      <div class="story-circle"><i class="bi bi-plus-lg"></i></div>
+      <small>New</small>
+    </div>
+    <div class="text-center">
+      <div class="story-circle"><img src="https://via.placeholder.com/70"></div>
+      <small>Story1</small>
     </div>
   </div>
 
-  <!-- Feed -->
-  <div class="row g-2">
-    <!-- 12 gambar dummy -->
-    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-      <img src="assets/img/feed1.jpg" class="feed-img" alt="feed">
-    </div>
-    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-      <img src="assets/img/feed2.jpg" class="feed-img" alt="feed">
-    </div>
-    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-      <img src="assets/img/feed3.jpg" class="feed-img" alt="feed">
-    </div>
-    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-      <img src="assets/img/feed4.jpg" class="feed-img" alt="feed">
-    </div>
-    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-      <img src="assets/img/feed5.jpg" class="feed-img" alt="feed">
-    </div>
-    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-      <img src="assets/img/feed6.jpg" class="feed-img" alt="feed">
-    </div>
-    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-      <img src="assets/img/feed7.jpg" class="feed-img" alt="feed">
-    </div>
-    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-      <img src="assets/img/feed8.jpg" class="feed-img" alt="feed">
-    </div>
-    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-      <img src="assets/img/feed9.jpg" class="feed-img" alt="feed">
-    </div>
-    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-      <img src="assets/img/feed10.jpg" class="feed-img" alt="feed">
-    </div>
-    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-      <img src="assets/img/feed11.jpg" class="feed-img" alt="feed">
-    </div>
-    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-      <img src="assets/img/feed12.jpg" class="feed-img" alt="feed">
-    </div>
+  <!-- Tabs -->
+  <div class="d-flex justify-content-around border-top border-dark py-2">
+    <i class="bi bi-grid-3x3 tab-icon"></i>
+    <i class="bi bi-camera-reels tab-icon"></i>
+    <i class="bi bi-person-square tab-icon"></i>
   </div>
 
-  <!-- Footer -->
-  <footer class="text-center mt-4 py-3 border-top border-secondary">
-    <small>&copy; 2025 Instagram Clone - Dzilalwyrhn</small>
-  </footer>
+  <!-- No Posts -->
+  <div class="text-center py-5">
+    <i class="bi bi-camera fs-1"></i>
+    <h6 class="mt-2">Share Photos</h6>
+    <p class="text-secondary">When you share photos, they will appear on your profile.</p>
+  </div>
 
-</div>
+  <!-- Bottom Navbar (only for mobile) -->
+  <nav class="navbar fixed-bottom bottom-nav d-flex justify-content-around d-md-none">
+    <i class="bi bi-house-door fs-4"></i>
+    <i class="bi bi-search fs-4"></i>
+    <i class="bi bi-plus-square fs-4"></i>
+    <i class="bi bi-camera-reels fs-4"></i>
+    <i class="bi bi-person-circle fs-4"></i>
+  </nav>
 
 </body>
 </html>
