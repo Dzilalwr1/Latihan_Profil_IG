@@ -3,8 +3,8 @@ PROFIL IG BOOSTRAP/
 │
 ├── profil_ig.html              # Halaman utama profil Instagram (versi Bootstrap)
 ├── assets/
-│   ├── img/                # Berisi gambar profil, story/highlight, dan feed
-│   └── css/                # External CSS untuk profil_ig.html
+│   ├── img/                # Berisi gambar profil, story, dan feed
+│   └── style.css           # External css untuk profil_ig.html
 ---
 
 Build / Run:
