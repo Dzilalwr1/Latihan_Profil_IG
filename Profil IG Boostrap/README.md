@@ -1,22 +1,22 @@
 ## **Struktur File:**
-PROFIL IG BOOSTRAP/
-│
-├── profil_ig.html              # Halaman utama profil Instagram (versi Bootstrap)
-├── assets/
-│   ├── img/                # Berisi gambar profil, story, dan feed
-│   └── style.css           # External css untuk profil_ig.html
+    PROFIL IG BOOSTRAP/
+    │
+    ├── profil_ig.html              # Halaman utama profil Instagram (versi Bootstrap)
+    ├── assets/
+    │   ├── img/                # Berisi gambar profil, story, dan feed
+    │   └── style.css           # External css untuk profil_ig.html
 ---
 
 ## **Build / Run:**
-1. Pastikan semua file sudah ada di folder boost/.
-2. Simpan gambar profil, story, dan feed di assets/img/.
-3. Buka file index.html langsung di browser (tidak butuh server tambahan).
-4. Semua library (Bootstrap + Icons) sudah dihubungkan via CDN, jadi tidak perlu instalasi manual.
+    1. Pastikan semua file sudah ada di folder boost/.
+    2. Simpan gambar profil, story, dan feed di assets/img/.
+    3. Buka file index.html langsung di browser (tidak butuh server tambahan).
+    4. Semua library (Bootstrap + Icons) sudah dihubungkan via CDN, jadi tidak perlu instalasi manual.
 ---
 
 ## **Dependensi:**
-Bootstrap 5.3.3 (via CDN)
-Bootstrap Icons (via CDN)
+    Bootstrap 5.3.3 (via CDN)
+    Bootstrap Icons (via CDN)
 ---
 
 ## **PERTANYAAN:**
