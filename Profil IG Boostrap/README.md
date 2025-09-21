@@ -1,4 +1,5 @@
 Struktur File:
+
 PROFIL IG BOOSTRAP/
 │
 ├── profil_ig.html              # Halaman utama profil Instagram (versi Bootstrap)
@@ -15,6 +16,7 @@ Build / Run:
 ---
 
 Dependensi:
+
 Bootstrap 5.3.3 (via CDN)
 Bootstrap Icons (via CDN)
 ---
