@@ -3,8 +3,8 @@
     │
     ├── profil_ig.html              # Halaman utama profil Instagram (versi Bootstrap)
     ├── assets/
-    │   ├── img/                # Berisi gambar profil, story, dan feed
-    │   └── style.css           # External css untuk profil_ig.html
+    │   ├── img/                    # Berisi gambar profil, story, dan feed
+    │   └── style.css               # External css untuk profil_ig.html
 ---
 
 ## **Build / Run:**
@@ -20,22 +20,19 @@
 ---
 
 ## **PERTANYAAN:**
-1. Mengapa memilih konfigurasi col tertentu untuk tiap breakpoint?
+    1. Mengapa memilih konfigurasi col tertentu untuk tiap breakpoint?
+    Agar layout foto tetap rapi dan responsif sesuai ukuran layar.
+    Mobile (≤576px) → 1 kolom supaya feed jelas.
+    Tablet (≥768px) → 2–3 kolom agar efisien.
+    Desktop (≥992px) → 4 kolom agar mirip Instagram asli.
 
-Agar layout foto tetap rapi dan responsif sesuai ukuran layar.
-Mobile (≤576px) → 1 kolom supaya feed jelas.
-Tablet (≥768px) → 2–3 kolom agar efisien.
-Desktop (≥992px) → 4 kolom agar mirip Instagram asli.
 
+    2. Bagaimana memastikan tombol Follow/Edit Profile tetap mudah dijangkau di mobile?
+    Dengan menggunakan Bootstrap responsive utility class (d-flex, w-100, btn-sm).
+    Sehingga tombol otomatis menyesuaikan ukuran layar dan tetap tersusun rapi.
 
-2. Bagaimana memastikan tombol Follow/Edit Profile tetap mudah dijangkau di mobile?
-
-Dengan menggunakan Bootstrap responsive utility class (d-flex, w-100, btn-sm).
-Sehingga tombol otomatis menyesuaikan ukuran layar dan tetap tersusun rapi.
-
-3. Jika postingan bertambah jadi 50, apa potensi masalah dan bagaimana solusinya?
-
-Masalah: loading halaman lebih berat, scroll panjang, grid penuh.
-Solusi:
-Gunakan pagination atau lazy loading gambar.
-Atur grid lebih detail dengan breakpoints tambahan agar rapi.
+    3. Jika postingan bertambah jadi 50, apa potensi masalah dan bagaimana solusinya?
+    Masalah: loading halaman lebih berat, scroll panjang, grid penuh.
+    Solusi:
+    Gunakan pagination atau lazy loading gambar.
+    Atur grid lebih detail dengan breakpoints tambahan agar rapi.
